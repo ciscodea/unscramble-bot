@@ -16,7 +16,7 @@ class Unscramble:
     def permute_text(self, text: str) -> list:
         """ return a list of all permutations of the word """
         if(self._text_length_validator(text=text)):
-            permuted_text = [''.join(p) for p in permutations(text)]
+            permuted_text = [''.join(p) for p in permutations(text.lower())]
             return permuted_text
 
         return []
